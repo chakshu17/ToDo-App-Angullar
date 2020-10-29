@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,14 +7,15 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent implements OnInit {
-  @Input() inputToDoItem
+  @Output() inputToDoItem = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
   submit(f:NgForm){
-    this.inputToDoItem=f.value.inputToDo
+    console.log('Input Component');
+    this.inputToDoItem.emit(f.value.inputToDo)
   }
 
 }

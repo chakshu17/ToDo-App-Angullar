@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 
   constructor() { }
-
+  inputData:string;
   ngOnInit(): void {
+
+  }
+  onSubmit(data:string){
+    console.log('Main Component');
+    console.log(data);
+
   }
 
 }
