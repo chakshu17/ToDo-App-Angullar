@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { environment } from '../environments/environment';
-
+import { HttpClientModule} from '@angular/common/http'
 import { FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { InputComponent } from './components/input/input.component';
     AppRoutingModule,
     FlexLayoutModule,
     FormsModule,
+    HttpClientModule,
     // AngularFireModule,
     // AngularFireModule.initializeApp(environment.firebase),
   ],
